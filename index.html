@@ -34,11 +34,13 @@
                             <a href="html/order.html">Order</a>
                             <a href="html/about.html">About</a>
                             <a href="html/contact.html">Contact</a>
+                            <a class="cart-btn-a" onclick="enable()">Cart</a>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
         <section>
             <div class="section">
                 <!-- momo's -->
@@ -242,23 +244,31 @@
                 </div>
             </div>
         </section>
-        <div id="cartPanel" class="cart-panel">
 
-            <div class="cart-header">
-                <h2>Your Cart</h2>
-                <button onclick="closeCart()">✖</button>
+        <section>
+            <div class="cart" id="cartPanel">
+                <div class="head-cart">
+                    <span>Your Cart</span>
+                    <span id="close-cart" onclick="disable()" class="hello">&#10006;</span>
+                </div>
+                <div class="cart-body">
+                    <ul id="cartItems" class="cart-items">
+                        <li class="empty">Your cart is empty.</li>
+                    </ul>
+                </div>
+                <div class="cart-footer">
+                    <p id="cartTotal">Total : 0₹</p>
+                    <button type="button" class="checkout-btn">Checkout</button>
+                </div>
             </div>
+        </section>
 
-            <ul id="cartItems"></ul>
-
-            <h3 id="cartTotal">Total : 0₹</h3>
-            <button id="placeOrder">Place Order</button>
-        </div>
         <div class="footer">
             <p>© 2026 Nature's Blessing | All Rights Reserved</p>
         </div>
     </div>
     <script src="js/script.js"></script>
+
 </body>
 
 </html
